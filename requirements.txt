@@ -1,6 +1,0 @@
-python-telegram-bot==20.7
-pandas
-openpyxl
-jdatetime
-pytz
-Flask
