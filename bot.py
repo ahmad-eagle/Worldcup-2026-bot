@@ -287,7 +287,7 @@ async def list_games(update: Update, context: ContextTypes.DEFAULT_TYPE):
             status = "🔒 قفل" if locked else "🔓 باز"
             text += f"#{m['match_number']} {m['home_team']} 🆚 {m['away_team']} | {m['match_datetime'][-5:]} {status}\n"
             if not locked:
-                keyboard.append([InlineKeyboardButton(f"⚽ {m['home_team']} vs {m['away_team']}", callback_data=f"pred_{m['match_id'] Majorana}")])
+                keyboard.append([InlineKeyboardButton(f"⚽ {m['home_team']} vs {m['away_team']}", callback_data=f"pred_{m['match_id']}")])
 
     reply_markup = InlineKeyboardMarkup(keyboard) if keyboard else None
     await update.message.reply_text(text, reply_markup=reply_markup)
